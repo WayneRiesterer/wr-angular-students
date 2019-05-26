@@ -1,0 +1,24 @@
+<h2>Recipes</h2>
+<h3>Description</h3>
+<p>
+  Select a recipe, get the ID value and use this to fetch the recipe details.
+</p>
+
+<div class="recipes" *ngFor="let recipe of recipes" (click)="onSelectRecipe(recipe)">
+  <p>ID: {{ recipe.id }}, Name: {{ recipe.name }}</p>
+</div>
+
+<div>***********</div>
+
+<button (click)="selectRecipeById(1)">Select recipe where ID === 1</button>
+<button (click)="selectRecipeById(2)">Select recipe where ID === 2</button>
+
+<h4>Recipe Selected</h4>
+<div >
+  <p *ngIf="selectedRecipe; else elseBlock">
+    ID: {{ selectedRecipe.id }}, Name: {{ selectedRecipe.name }}
+  </p>
+  <ng-template #elseBlock>
+    <p>Nothing selected.
+  </ng-template>
+</div>

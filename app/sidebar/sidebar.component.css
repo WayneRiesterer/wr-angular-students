@@ -1,0 +1,43 @@
+i {
+  font-size: 2.5rem;
+  transition: 0.5s;
+  position: relative;
+  top: 1.5rem;
+}
+
+i.close {
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    background-color: white;
+    padding-top: 2rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.sidenav.open {
+  width: 250px;
+}
+
+a {
+  display: block;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  color: darkslategray;
+}
+
+a:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+}
+
+hr {
+  margin-bottom: 1rem;
+}

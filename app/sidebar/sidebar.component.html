@@ -1,0 +1,21 @@
+
+<h2>Sidenav</h2>
+
+<h3>Description</h3>
+<p>
+	Basic sidenav that opens up on the left. Click the button to toggle the sidenav. When a link is clicked, the sidenav will
+	automatically close.
+</p>
+
+<hr>
+
+<p><strong>Current Link Selected:</strong> {{ linkSelected || 'None Selected'}}</p>
+
+<div class="sidenav-container">
+	<i class="fas fa-arrow-circle-right" [ngClass]="{close: isOpen}" (click)="toggleSidenav()"></i>
+	<nav class="sidenav" [ngClass]="{open: isOpen}">
+		<a *ngFor="let link of links" (click)="onLinkClick(link)">
+			{{ link }}
+		</a>
+	</nav>
+</div>

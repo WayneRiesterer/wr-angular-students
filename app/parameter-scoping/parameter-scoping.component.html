@@ -1,0 +1,22 @@
+<h2>Parameter Scoping</h2>
+
+<hr>
+
+<h3>Description</h3>
+<p>
+  If the selected person is changed and this value is updated in the person service, this will not be reflected in the child component (PersonComponent).
+</p>
+<p>
+  This code doesn't work and that is the whole point of it. It is much better to use property and event binding to accomplish this. Better alternatives in some cases include services and ngrx. Trying to access variables by reference, as though they are a global, is not a good practice.
+</p>
+
+<form [formGroup]="form">
+  <select (change)="selectPerson()" formControlName="name">
+    <option *ngFor="let person of people">{{ person.name }}</option>
+  </select>
+</form>
+
+<hr>
+
+<h3>Child Component (PersonComponent)</h3>
+<app-person></app-person>

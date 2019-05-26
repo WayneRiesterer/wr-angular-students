@@ -1,0 +1,11 @@
+.recipes:hover {
+  background-color: grey;
+  color: white;
+  cursor: pointer;
+}
+
+button {
+  padding: 4px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
